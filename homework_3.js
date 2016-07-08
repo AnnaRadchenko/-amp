@@ -1,8 +1,8 @@
 //1
 
 var obj1 = {
-    name: "Anna",
-    age: 25
+  name: "Anna",
+  age: 25
 };
 
 function Obj2(name, age) {
@@ -13,7 +13,7 @@ function Obj2(name, age) {
 var obj2 = new Obj2("Mari", 27);
 
 function compareObjects(object1, object2, property) {
-    return console.log(object1.property > object2.property ? object1.name : object2.name);
+  return console.log(object1.property > object2.property ? object1.name : object2.name);
 }
 
 compareObjects(obj1, obj2, 'age');
@@ -67,13 +67,13 @@ favoriteSong(songs);
 
 function Calculator() {
 
-	var value = 0;
+  var value = 0;
+  
+  this.add = function(num) {
+    value += num;
+  };
 
-	this.add = function(num) {
-		value += num;
-	};
-
-	this.getCurrentSum = function(i)	{
+  this.getCurrentSum = function(i)	{
 		/*
 		returns the resulting number by the index on step
 		I call
@@ -82,20 +82,20 @@ function Calculator() {
 		Tell me please where a mistake?
 		*/
 		return (i == true) ? value[i] : value;
-	};
+  };
 }
 
-	var calculator1 = new Calculator();
-	var calculator2 = new Calculator();
+  var calculator1 = new Calculator();
+  var calculator2 = new Calculator();
 
-	calculator1.add(3);
-	calculator1.add(8);
-	calculator1.add(11);
-	calculator2.add(5);
-	calculator2.add(12);
-	calculator2.add(17);
+  calculator1.add(3);
+  calculator1.add(8);
+  calculator1.add(11);
+  calculator2.add(5);
+  calculator2.add(12);
+  calculator2.add(17);
 
-	console.log(calculator1.getCurrentSum() + calculator2.getCurrentSum());
-	console.log(calculator1.getCurrentSum(2) + calculator2.getCurrentSum(2));//?
-	console.log(calculator1.getCurrentSum(3));
-    console.log(calculator1.getCurrentSum());
+  console.log(calculator1.getCurrentSum() + calculator2.getCurrentSum());
+  console.log(calculator1.getCurrentSum(2) + calculator2.getCurrentSum(2));//?
+  console.log(calculator1.getCurrentSum(3));
+  console.log(calculator1.getCurrentSum());
