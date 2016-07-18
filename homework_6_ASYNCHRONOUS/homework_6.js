@@ -17,10 +17,12 @@ function loadPage(bookId) {
   similar.textContent = 'Please wait. Similar books are loading';
 
   fetch('api/books/' + id)
-    .then(function(book){ book.textContent = book.name;
+    .then(function(book){
+      book.textContent = book.name;
       return fetch('api/autors' + book.authorId);
     })
-    .then(function(author) { author.textContent = author.name;
+    .then(function(author) {
+      author.textContent = author.name;
       return Promise.all(author.books.map(function(book) {
         return fetch('api/bestsellers/similar/' + book.id);
       }))
