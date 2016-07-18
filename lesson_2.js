@@ -1,140 +1,40 @@
-//-------------------------------------------1 part-------------------------------------------//
+//масив лучше модифицировать, но при этом оставляем предедущие состояние (делаем return arr.map()
+//все проверки на чесло делаем вначале функции
+//rememmber abou foeEach
+//сравнение с помощщю === (вменсто == 0)
+//проверять или число nan (исп type of && is not NaN)
+//sort( function(a > b)
+//return b > a)
+//обявлять перменнные вначали функици
+//через for in не перибираем масив
+//мемойзинг
+//функция конструктор: функция не возвращает, но new делае чтоб возвращала
+//Rectangular.apply({});
+//scope chain
+//замыкание это пеебор всех scope chain
+//биндинг - на что будет указыватть this  внутри функции
 
-//1.1
+//object.constructor.prototype 
+//ще один метод взнати чи є прототип
+//у обєкта нету  свойства prototype, оно есть только у функции
+//методы записи в прототип
+cirtcle.prototype.z = 12
+//в каких способах нельзя наследоваться (когда обєкт функции коструктора  на который ссылается прототип принимает параметр)(input )
+//если в create передать null то не сможем именть протим у обєкта
+//какая проблема inner html
+//МЕМОЙЗИНГ
+//ПАТЕРН КОМПОЗИЯ ФУНКЦИЙ
+// в задаче про песни все методы писать в прототипе (это очень в ООП)
+//html 5 api чит як підгружати файлики замість форм
+//чит про cors
 
-function extractCharacters( str ) {
+//в домашке в задаче 2 запроса. узнать что пришли запрос использовать promise.all
+// + роверка (количество юзеров, 89 не существует
 
-  var strLowerCase = str.toLowerCase().split('');
-  var uniqueCharacters = {};
-
-  for (var i = 0; i < strLowerCase.length; i++) {
-    var str = strLowerCase[i];
-    uniqueCharacters[str] = true;
-  }
-  console.log( Object.keys(uniqueCharacters) );
-}
-
-extractCharacters('abcd');
-extractCharacters('aaaabc');
-extractCharacters('Hello, world');
-
-//1.2
-
-function createLogger( prefix ) {
-
-  var date = new Date().toISOString();
-
-  function getData(data) {
-    console.log(date + ' ' + prefix + ': ' + data);
-  };
-
-  return getData;
-}
-
-var myLogger = createLogger ('My Logger');
-
-myLogger( 'some data' );
-
-//-------------------------------------------2 part-------------------------------------------//
-
-/*
-2.1
-Create a function called celsiusToFahrenheit:
-Store a celsius temperature into a variable.
-Convert it to fahrenheit and output "NN°C is NN°F"
-*/
-
-function celsiusToFahrenheit (t) {
-
-  var fahrenheit = t * 1.8 + 32;
-  return t + "°C = " + fahrenheit + "°F";
-
-}
-
-/*
-2.2
-Create a function called fahrenheitToCelsius:
-Now store a fahrenheit temperature into a variable.
-Convert it to celsius and output "NN°F is NN°C
-*/
-
-function fahrenheitToCelsius (fahrenheit) {
-
-  var t = (fahrenheit - 32) / 1.8;
-  return fahrenheit + "°F = " + t + "°C";
-
-}
-
-/*
-2.3
-Write a JavaScript function that accepts a string as a parameter and find the longest word within the string.
-Example string : 'Hello, GlobalLogic!'
-Expected Output : 'GlobalLogic'
-*/
-
-function findBigWord (str) {
-
-  var bigWord = str.split(" ").map(replaceElement).reduce(reduceElement);
-
-  function replaceElement (el) {
-    return el.replace(/[\.,-\/#!$%\^&\*;:{}=\-_`~()]/gmi, '');
-  }
-
-  function reduceElement (x, y) {
-    var elemLength = (x.length > y.length) ? x : y;
-    return elemLength;
-  }
-  return bigWord;
-}
-
-/*
-2.4
-Write a function that can print entity details based on next model:
-{
-  name: String,
-  type: String,
-  age: Number
-}
-Expected output: "%NAME%(%TYPE%) - %AGE%."
-*/
-
-var obj = {
-    name: 'Anna',
-    type: 'female',
-    age: 25
-};
-
-function printDetails (el) {
-  var details = "%" + el.name + "%(%" + el.type + "%) - %" + el.age + "%." ;
-  return details;
-}
-
-console.log(printDetails(obj));
-
-/*
-2.5
-Rewrite that function to use this instead of argument (use apply, call and bind to print the details of different entities).
-*/
-var obj = {
-    name: 'Anna',
-    type: 'female',
-    age: 25
-};
-var useApply = printDetails.apply(obj, ['name', 'type', 'age']);
-var useCall = printDetails.call(obj, 'name', 'type', 'age');
-var useBind = printDetails.bind(obj);
-
-function printDetails () {
-    return "%" + this.name + "%(%" + this.type + "%) - %" + this.age + "%." ;
-}
-
-console.log(useApply);
-console.log(useCall);
-console.log(useBind());
-
-
-
-
-
-
-
+//debaging tools on mobile phone
+//more tools --> inspected devices)
+//активировать режим разработчика на моб тел
+//onami code
+//zerg rush
+//AMD common.js
+//duglass Crocford - about code style
