@@ -45,9 +45,8 @@ function add(x) {
     sum += x;
     return addNumber;
     }
-
-    addNumber.valueOf = function(){
-        return sum;
-    };
-    return addNumber;
+  addNumber.valueOf = function(){
+    return sum;
+  };
+  return addNumber;
 }
